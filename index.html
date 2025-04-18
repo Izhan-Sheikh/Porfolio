@@ -1,862 +1,446 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rumentel="preconnect" href="https://fonts.googleapis.com">
+    <title>Izhan - Front End Developer & UI/UX Designer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
-        rel="stylesheet">
-    <style>
-        /* Navbar Styles */
-        .navbar {
-            background-color: #fff;
-            padding: 15px 0;
-            font-family: 'Arial', sans-serif;
-        }
-
-        .navbar-nav {
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .navbar-brand {
-            font-weight: bold;
-            font-size: 24px;
-            color: #007bff;
-            text-transform: uppercase;
-        }
-
-        .navbar-nav .nav-link {
-            font-size: 18px;
-            color: #333;
-            padding: 10px 10px;
-            text-transform: uppercase;
-            font-weight: bold;
-            transition: color 0.3s ease, transform 0.3s ease;
-            margin: 8px;
-
-        }
-
-        .navlink {
-            margin-left: 400px;
-        }
-
-        .navbar-nav .nav-link:hover,
-        .navbar-nav .nav-link.active {
-            color: #aa00ff;
-            transform: translateY(-3px);
-        }
-
-
-        .navbar-nav .nav-link.active {
-            color: #aa00ff, #6f00ff;
-        }
-
-
-        .navbar-toggler {
-            border: none;
-        }
-
-        .navbar-toggler-icon {
-            background-color: #333;
-        }
-
-
-        .fixed-top {
-            z-index: 9999;
-        }
-
-        .img {
-            height: 90px;
-            width: 90px;
-        }
-
-        .hero-text .text-center {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-        }
-
-
-        * {
-            font-family: "Nunito Sans", serif;
-
-        }
-
-
-        h2 {
-            text-align: center;
-        }
-
-        .progress-bar {
-            background: linear-gradient(135deg, #aa00ff, #6f00ff);
-
-
-        }
-
-        .progress {
-            background-color: rgb(252, 245, 245);
-            margin-top: 20px;
-        }
-
-        .percentage {
-
-            font-size: 12px;
-
-
-            body {
-                font-family: 'Arial', sans-serif;
-                background-color: #f4f4f4;
-            }
-
-            .navbar {
-                background-color: #fff;
-                padding: 15px 0;
-            }
-
-            .navbar a {
-                color: #333;
-                text-decoration: none;
-                margin-right: 20px;
-            }
-
-            .navbar a:hover {
-                color: #007bff;
-            }
-
-            .container {
-                padding-top: 50px;
-            }
-
-            .latest-works h2 {
-                font-size: 2.5rem;
-                font-weight: bold;
-                margin-bottom: 20px;
-            }
-
-            .latest-works .progress {
-                height: 5px;
-                background-color: #eee;
-            }
-
-            .latest-works .progress-bar {
-                background-color: #007bff;
-                height: 5px;
-            }
-
-            .projects {
-                display: flex;
-                justify-content: space-between;
-                margin-top: 30px;
-            }
-
-            .project {
-                width: 30%;
-                padding: 15px;
-                border-radius: 5px;
-                background-color: #fff;
-                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-                text-align: center;
-            }
-
-            .project img {
-                width: 100%;
-                height: 200px;
-                object-fit: cover;
-                border-radius: 5px;
-                margin-bottom: 15px;
-            }
-
-            .project h3 {
-                font-size: 1.5rem;
-                margin-bottom: 10px;
-            }
-
-            .project p {
-                font-size: 1rem;
-                color: #666;
-            }
-
-        }
-
-        .boody {
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            padding: 20px;
-            margin: 0;
-        }
-
-
-        .stat {
-            text-align: center;
-        }
-
-        .stat h1 {
-            font-size: 4em;
-            color: white;
-            margin-bottom: 10px;
-        }
-
-        .stat p {
-            color: white;
-        }
-
-        .card {
-            box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-20px);
-            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
-        }
-
-        .resume-container {
-            background-color: #ffffff;
-            border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-        }
-
-        .resume-title {
-
-            font-weight: bold;
-            margin-bottom: 30px;
-            text-align: center;
-            color: #6c63ff;
-        }
-
-        .resume-image {
-            border: 1px solid #807d7d;
-            border-radius: 10px;
-            overflow: hidden;
-        }
-
-        .experience-title {
-            font-weight: bold;
-            color: #6c63ff;
-            margin-bottom: 15px;
-            font-size: 25px;
-        }
-
-        .experience-item {
-            margin-bottom: 15px;
-        }
-
-        .experience-item h5 {
-            margin: 0;
-            font-size: 16px;
-            font-weight: bold;
-        }
-
-        .experience-item span {
-            font-size: 14px;
-            color: #6c757d;
-        }
-
-        .booody {
-
-            margin: 1px;
-
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #aa00ff, #6f00ff);
-            color: #fff;
-
-        }
-
-        .section {
-
-            padding: 70px;
-        }
-
-        .section h1 {
-            font-size: 2.5rem;
-            font-weight: bold;
-            line-height: 1.5;
-        }
-
-        .section h1 span {
-            color: #00ff85;
-        }
-
-        .section p {
-            font-size: 1rem;
-            margin: 20px 0;
-            color: #d3d3d3;
-        }
-
-
-        .cn {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
-            color: #333;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-
-        }
-
-        .contact-section {
-            width: 100%;
-
-            background: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .contact-section h1 {
-            font-size: 2rem;
-
-        }
-
-        .contact-section h1::after {
-            content: "";
-            display: block;
-            width: 50px;
-            height: 3px;
-            background: linear-gradient(135deg, #aa00ff, #6f00ff);
-            margin-top: 5px;
-        }
-
-        .contact-section form {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .contact-section input,
-        .contact-section textarea {
-            width: 100%;
-            padding: 10px;
-            font-size: 1rem;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            outline: none;
-            transition: border-color 0.3s ease;
-        }
-
-        .contact-section input:focus,
-        .contact-section textarea:focus {
-            border-color: #6a5acd;
-        }
-
-        .contact-section textarea {
-            resize: none;
-            height: 100px;
-        }
-
-        .contact-section button {
-            padding: 12px;
-            font-size: 1rem;
-            font-weight: bold;
-            color: #fff;
-            background-color: #6a5acd;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .contact-section button:hover {
-            background-color: #483d8b;
-        }
-
-        .footer {
-            background-color: #1f1f1f;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        .footer a {
-            color: #fff;
-            text-decoration: none;
-        }
-
-        .footer a:hover {
-            text-decoration: underline;
-        }
-
-        .container-fluid {
-            display: flex;
-            justify-content: space-around;
-        }
-
-        .col-md-3 {
-            flex-basis: 25%;
-        }
-
-        .footer-icons {
-            margin-top: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .footer-icons i {
-            font-size: 24px;
-            margin: 0 10px;
-            color: #fff;
-        }
-
-        .footer-icons i:hover {
-            color: #6f00ff;
-        }
-
-        /* Hero Section */
-        #hero {
-            text-align: left;
-            background: #f8f9fa;
-            color: #333;
-            height: 100vh;
-            padding-left: 50px;
-            padding-right: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            display: inline-block;
-
-        }
-
-        .hero-text {
-            max-width: 700px;
-            margin-top: -100px;
-            display: inline-block;
-        }
-
-        .hero-text h1 {
-            font-weight: bold;
-            font-size: 70px;
-            margin-bottom: 15px;
-            margin-left: -60px;
-            display: inline-block;
-
-        }
-
-        .hero-text .intro-text {
-            font-size: 1.2rem;
-            font-weight: normal;
-            color: #555;
-            margin-top: 35px;
-            margin-left: -60px;
-            display: inline-block;
-        }
-
-        .btn-hire {
-            display: inline-block;
-            padding: 20px 50px;
-            background: linear-gradient(135deg, #aa00ff, #6f00ff);
-            color: white;
-            text-transform: uppercase;
-            font-weight: bold;
-            border-radius: 8px;
-            font-size: 16px;
-            text-decoration: none;
-            margin-top: 30px;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-            margin-left: -55px;
-            display: inline-block;
-        }
-
-
-        .btn-hire:hover {
-            background: linear-gradient(135deg, #c655ff, #9646ff);
-            transform: translateY(-5px);
-            display: inline-block;
-        }
-
-
-        .btn-hire:focus {
-            outline: none;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-        }
-
-        .linksfoot {
-            padding: 4px;
-            margin-left: -30px;
-            margin-top: 4px;
-        }
-
-
-        .card {
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .card-img {
-            height: 200px;
-            object-fit: cover;
-            width: 100%;
-        }
-
-        @media (max-width: 768px) {
-            .navbar-nav {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .hero-text h1 {
-                font-size: 50px;
-            }
-
-            .hero-text .intro-text {
-                font-size: 1rem;
-            }
-        }
-
-        @media (max-width: 768px) {
-    .hero-text h1 {
-        font-size: 40px;
-        text-align: center;
-    }
-
-    .hero-text .intro-text {
-        font-size: 0.9rem;
-        text-align: center;
-    }
-
-    .btn-hire {
-        margin-left: 0 !important;
-        display: block;
-        margin: 20px auto 0;
-    }
-}
-
-
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <header>
         <div class="container">
-            <a class="navbar-brand" href="#">
-                <img class="img" src="images/s-removebg-preview.png" alt="Your Logo" width="150" height="auto">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse navlink" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#Portfolio">Portfolio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#work">Latest Works</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            <nav>
+                <div class="logo">Izhan</div>
+                <ul class="nav-links">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
-            </div>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
         </div>
-    </nav>
+    </header>
 
-    <section id="hero" class="d-flex align-items-center" style="background: #f8f9fa; color: #333; height: 100vh;">
+    <section id="home" class="hero">
         <div class="container">
-          <div class="row align-items-center">
-            <div class="col-lg-6 col-md-12">
-              <div class="hero-text">
-                <h1 class="font-weight-bold">IZHAN SHEIKH</h1>
-                <p class="intro-text">
-                  I'm a passionate Software Engineering student, focusing on web development and
-                  UI/UX design. With a strong foundation in front-end technologies, I am constantly
-                  refining my skills to create innovative digital solutions to solve real-world problems.
-                </p>
-                <a href="#contact" class="btn-hire">HIRE ME</a>
-              </div>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <span class="hero-greeting">Hello, I'm</span>
+                    <h1><span class="highlight">Izhan</span></h1>
+                    <h2>Front End Developer & UI/UX Designer</h2>
+                    <p>I create beautiful, functional, and user-friendly digital experiences</p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn primary-btn">View My Work</a>
+                        <a href="#contact" class="btn secondary-btn">Contact Me</a>
+                    </div>
+                </div>
             </div>
-            <div class="col-lg-6 col-md-12 text-center">
-              <img src="images/izhan sheikh image.gif" class="img-fluid" alt="Izhan Sheikh GIF" />
+            <div class="hero-visual">
+                <div class="code-block">
+                    <pre><code><span class="code-keyword">const</span> <span class="code-variable">developer</span> = {
+  <span class="code-property">name</span>: <span class="code-string">'Izhan'</span>,
+  <span class="code-property">skills</span>: [<span class="code-string">'HTML'</span>, <span class="code-string">'CSS'</span>, <span class="code-string">'JavaScript'</span>, <span class="code-string">'React'</span>],
+  <span class="code-property">design</span>: [<span class="code-string">'UI/UX'</span>, <span class="code-string">'Figma'</span>, <span class="code-string">'Adobe XD'</span>],
+  <span class="code-property">passion</span>: <span class="code-string">'Creating beautiful digital experiences'</span>,
+  <span class="code-property">status</span>: <span class="code-string">'Available for projects'</span>
+};</code></pre>
+                </div>
+                <div class="hero-shape shape1"></div>
+                <div class="hero-shape shape2"></div>
+                <div class="hero-shape shape3"></div>
+                <div class="hero-shape shape4"></div>
+                <div class="hero-shape shape5"></div>
+                <div class="typed-text">
+                    <span class="typed-prefix">I love </span><span class="element"></span>
+                </div>
             </div>
-          </div>
         </div>
-      </section>
-      
-
-            
-
-            
+        <div class="hero-scroll">
+            <a href="#about">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <div class="down-arrow">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </a>
         </div>
     </section>
 
-
-    <section class="mt-5" id="about">
-
+    <section id="about" class="about">
         <div class="container">
-            <div class="row align-items-start">
-                <div class="col">
-                    <img src="images/javaaa.jpg" alt width="500px">
+            <div class="section-header">
+                <h3>About Me</h3>
+                <div class="section-divider"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h4>Front End Developer & UI/UX Designer</h4>
+                    <p>Hello! I'm Izhan, a passionate front-end developer and UI/UX designer currently in 11th grade. Despite my young age, I have a strong foundation in creating beautiful, functional web experiences that users love.</p>
+                    <p>My journey in web development began with curiosity about how websites work, which quickly evolved into a passion for coding and design. I enjoy combining technical skills with creative thinking to build modern, responsive websites and applications.</p>
+                    <p>When I'm not coding or designing, I'm expanding my knowledge through online courses, participating in coding competitions, and working on personal projects that challenge my abilities.</p>
+                    <div class="about-buttons">
+                        <a href="content/Izhan Sheikh CV.docx" class="btn primary-btn">Download CV</a>
+                        <a href="/content/Izhan Sheikh CV.pdf" class="btn secondary-btn">View CV</a>
+                    </div>
                 </div>
-
-                <div class="col">
-                    <h1>MY BIO DATA</h1>
-                    <span style="width:20px;">
-                        <hr style="width: 250px;">
-                    </span>
-                    <p style="margin-bottom: 30px;">I am a Class 10 student
-                        at The Smart School,
-                        currently pursuing a 3-year diploma in Software
-                        Engineering at Aptech. I am passionate about
-                        technology and specialize in front-end development,
-                        SEO, and UI/UX design. With a solid command of HTML,
-                        CSS, JavaScript, and proficiency in MS Office, I am
-                        focused on creating efficient, visually appealing,
-                        and user-friendly web solutions.
-
-                        By combining my academic pursuits with professional
-                        training, I aim to continually refine my skills and
-                        deliver innovative digital experiences. My journey
-                        in technology reflects a commitment to growth and
-                        excellence, as I prepare for a dynamic career in the
-                        tech industry.</p>
-
-                    <section class="skills">
-                        <div class="containerr">
-                            <div class="skill-list">
-                                <div class="skill">
-                                    <h6>HTML-CSS</h6>
-                                    <div class="progress">
-                                        <div class="progress-bar" style="width: 90%"></div>
-                                        <span class="percentage">90%</span>
-                                    </div>
-                                </div>
-                                <div class="skill">
-                                    <h6 style="margin-top: 20px;">JavaScript</h6>
-                                    <div class="progress">
-                                        <div class="progress-bar" style="width: 65%"></div>
-                                        <span class="percentage">65%</span>
-                                    </div>
-                                </div>
-                                <div class="skill">
-                                    <h6 style="margin-top: 20px;">Bootstrap
-                                        - jQuery</h6>
-                                    <div class="progress">
-                                        <div class="progress-bar" style="width: 70%"></div>
-                                        <span class="percentage">70%</span>
-                                    </div>
-                                </div>
-                                <div class="skill">
-                                    <h6 style="margin-top: 20px;">SEO</h6>
-                                    <div class="progress">
-                                        <div class="progress-bar" style="width: 75%"></div>
-                                        <span class="percentage">75%</span>
-                                    </div>
-                                </div>
-                                <div class="skill">
-                                    <h6 style="margin-top: 20px;">UI/UX</h6>
-                                    <div class="progress">
-                                        <div class="progress-bar" style="width: 70%"></div>
-                                        <span class="percentage">70%</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <br>
-                            <div class="text-center">
-                                <a href="images/Izhan Sheikh cv (2).docx" class="btn-hire button-container">Download
-                                    Resume</a>
-                            </div>
-                        </div>
-                    </section>
+                <div class="about-stats">
+                    <div class="stat">
+                        <h5>Education</h5>
+                        <p>HSC (11th Grade)</p>
+                    </div>
+                    <div class="stat">
+                        <h5>Languages</h5>
+                        <p>HTML, CSS, JavaScript</p>
+                    </div>
+                    <div class="stat">
+                        <h5>Design Tools</h5>
+                        <p>Figma, Photoshop</p>
+                    </div>
+                    <div class="stat">
+                        <h5>Frameworks</h5>
+                        <p>Bootstrap</p>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </section><br>
-
-    </div>
-    <section>
-
-        <div class="boody mt-5 ">
-            <div class="stat ">
-                <h1>20+</h1>
-                <p>Project Completed</p>
-            </div>
-            <div class="stat">
-                <h1>6+</h1>
-                <p>Happy Clients</p>
-            </div>
-            <div class="stat">
-                <h1>8+</h1>
-                <p>Cups Of Coffee</p>
-            </div>
-            <div class="stat">
-                <h1>3+</h1>
-                <p>Real Professionals</p>
             </div>
         </div>
     </section>
-    <section id="work">
-        <div class="container latest-works mt-5">
-            <h1>LATEST WORKS</h1>
-            <span style="width:20px;">
-                <hr style="width: 250px;">
-            </span>
-            <br>
-            <p>Showcasing my recent projects that blend creativity with
-                functionality. <br>These works demonstrate my skills in web
-                development, UI/UX design, <br> and interactive digital
-                solutions.
-            </p>
-            <div class="row row-cols-1 row-cols-md-3 g-4 mt-5">
-                <div class="col">
-                    <div class="card h-100">
-                        <img src="images/Screenshot (555).png" class="card-img-top card-img" alt="Web Development">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Web Development</h5>
-                            <p class="card-text">Worked on eye-catching design
-                                and made this using HTML and CSS.</p>
+
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h3>My Skills</h3>
+                <div class="section-divider"></div>
+            </div>
+            <div class="skills-content">
+                <div class="skill-category">
+                    <h4>Front End Development</h4>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>HTML5</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>CSS3 </span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>JavaScript</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Bootstrap</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="card h-100">
-                        <img src="images/LOL.png" class="card-img-top card-img" alt="UI/UX Design">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">UI/UX DESIGN</h5>
-                            <p class="card-text">Made this application design
-                                using Figma.</p>
+                <div class="skill-category">
+                    <h4>UI/UX Design</h4>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Figma</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card h-100">
-                        <img src="images/Screenshot (558).png" class="card-img-top card-img" alt="Card Title">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">E-PROJECT</h5>
-                            <p class="card-text">Made this e-project on nobel prize winners
-                            </p>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Photoshop</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>User Research</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                       
+                            
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section id="Portfolio">
-        <br><br>
-        <div class="container mt-5">
-            <h1 class="resume-title">Resume</h1>
-            <div class="row resume-container">
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h3>My Projects</h3>
+                <div class="section-divider"></div>
+            </div>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web Development</button>
+                <button class="filter-btn" data-filter="ui">UI/UX Design</button>
+            </div>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <img src="content/2.png" alt="NexusVerse">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://izhan-sheikh.github.io/NEXUSVERSE/" class="view-project-btn">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h4>NexusVerse</h4>
+                        <p>A anime themed for art lovers.</p>
+                        <div class="project-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                           
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="project-card" data-category="ui">
+                    <div class="project-image">
+                        <img src="content/1.png" alt="Mobile App Design">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://izhan-sheikh.github.io/UI-UX-PORTFOLIO/#about" class="view-project-btn">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h4>Mobile App Design</h4>
+                        <p>A sleek and intuitive mobile app UI design for a fitness tracking application.</p>
+                        <div class="project-tags">
+                            <span>Figma</span>
+                            <span>UI Design</span>
+                            <span>UX Design</span>
+                            
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <img src="content/3.png" alt="Islamify">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://izhan-sheikh.github.io/Islamify/" class="view-project-btn">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h4>Islamify</h4>
+                        <p>A website for a Islamic Education.</p>
+                        <div class="project-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 4 -->
+                <div class="project-card" data-category="ui">
+                    <div class="project-image">
+                        <img src="content/7.png" alt="Dashboard UI">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://izhan-sheikh.github.io/UI-UX-PORTFOLIO/#about" class="view-project-btn">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h4>Music Player</h4>
+                        <p>A desgin for music application.</p>
+                        <div class="project-tags">
+                            <span>Figma</span>
+                            <span>UI Design</span>
+                            <span>Dashboard</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 5 -->
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <img src="content/4.png" alt="Weather App">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://izhan-sheikh.github.io/UI-UX-PORTFOLIO/" class="view-project-btn">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h4>UI/UX Portfolio</h4>
+                        <p>A weather application with location search, forecast display, and beautiful UI elements.</p>
+                        <div class="project-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                           
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 6 -->
+                <div class="project-card" data-category="ui">
+                    <div class="project-image">
+                        <img src="content/4(4).png" alt="Mini-Shop">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://izhan-sheikh.github.io/UI-UX-PORTFOLIO/#about" class="view-project-btn">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h4>Mini-Shop</h4>
+                        <p>A comprehensive UI design for a e-commerce application.</p>
+                        <div class="project-tags">
+                            <span>UI Design</span>
+                            
+                            <span>Figma</span>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h3>Contact Me</h3>
+                <div class="section-divider"></div>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h4>Let's Work Together!</h4>
+                    <p>I'm currently available for freelance work or internship opportunities. If you have a project that you want to get started, think you need my help with something, or just want to say hello, feel free to contact me.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>mizhansheikh5@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+92 334 9106777</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Karachi, Pakistan</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm" action="https://formsubmit.co/mizhansheikh5@gmail.com" method="POST">
+                        <input type="hidden" name="_subject" value="New Portfolio Contact Form Submission">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="thanks.html">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_replyto" value="%email%">
+                        <input type="text" name="_honey" style="display:none">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn primary-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Izhan</h3>
+                    <p>Front End Developer & UI/UX Designer</p>
+                </div>
                 
-                <div class="col-md-6">
-                    <div class="resume-image">
-                        <img src="images/Cv.jpg" alt="Resume Image" class="img-fluid">
-                    </div>
-                </div>
-                <!-- Right Section: Work Experience -->
-                <div class="col-md-6">
-                    <div class="experience-title">My Work Experience</div>
-                    <div class="experience-list">
-                        <div class="experience-item">
-                            <hr>
-                            <h5>Video Editor</h5>
-                            <span>Freelancing | 2019 - 2022 | Part-Time</span>
-                        </div>
-
-                        <hr>
-                        <div class="experience-item">
-                            <h5>Web Developer Intern</h5>
-                            <span>Aptech | 2024 - currently | Intern</span>
-                        </div>
-                        <hr>
-
-                        <div class="experience-item">
-                            <h5>UI/UX</h5>
-                            <span>Aptech | 2023 - currently | Intern</span>
-                        </div>
-                        <hr>
-                        <div class="experience-item">
-                            <h5>Office Support Specialist</h5>
-                            <span>Aptech | 2020 - 2023 | Part-Time</span>
-                        </div>
-                        <hr>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="section booody text-center mt-5">
-            <div class="container">
-                <h1>I am <span>available</span> for Website Designing and
-                    Development and for Online Training</h1>
-
-                <a href="#contact" class="btn">Hire Me</a>
-            </div>
-    </section>
-    <section id="contact">
-        </div><br>
-        <h1 style="margin-left: 90px;">Contact Me</h1>
-        <hr style="width: 200px; margin-left: 90px; height: 20px; ">
-        <div class="contact-section cn ">
-
-            <form style="width: 800px;" action="https://api.web3forms.com/submit" method="post">
-                <input type="hidden" name="access_key" value="24356a31-790d-4c09-a4e3-d0cfc1a68100">
-                <div style="display: flex; gap: 15px;">
-                    <input type="text" name="username" placeholder="Username" required>
-                    <input type="email" name="email" placeholder="demo@mail.com" required>
-                </div>
-                <input type="text" name="subject" placeholder="Subject" required>
-                <textarea name="message" placeholder="Write your message" required></textarea>
-                <button type="submit">Submit</button>
-                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-            </form>
-        </div>
-    </section>
-    <footer class="footer mt-5 ">
-        <div class="container-fluid text-center container">
-            <div class="row">
-                <div class="col-md-3">
-                    <h4>About</h4>
-                    <p>I am a Class 10 student at The Smart School, currently
-                        pursuing a 3-year diploma in Software Engineering at
-                        Aptech. I am passionate about technology and specialize
-                        in front-end development, SEO, and UI/UX design..</p>
-                </div>
-                <div class="col-md-3 ">
-                    <h4>Links</h4>
-                    <ul style="list-style: none;">
-                        <li><a href="#" class="linksfoot">Home</a></li>
-                        <li class="linksfoot"><a href="#">About</li>
-                        <li class="linksfoot"><a href="#">Services</a></li>
-                        <li class="linksfoot"><a href="#">Contact</a></li>
+                <div class="footer-nav">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
-                <div class="col-md-3">
-                    <h4>Contact</h4>
-                    <p>Email: mizhansheikh5@example.com</p>
-                    <p>Phone: +92 334 9106777</p>
-                </div>
-                <div class="col-md-3">
-                    <h4>Follow Me</h4>
-                    <div class="footer-icons">
-                        <i class="fab fa-facebook-f"></i>
-                        <i class="fab fa-twitter"></i>
-                        <i class="fab fa-instagram"></i>
-                        <i class="fab fa-linkedin-in"></i>
+                
+                <div class="footer-contact">
+                    <h4>Contact Info</h4>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>mizhansheikh5@gmail.com</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+92 334 9106777</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Karachi, Pakistan</span>
                     </div>
                 </div>
             </div>
-        </div><br><br>
-        <div class="text-center">
-            <p>&copy; 2025 Izhan Sheikh.</p>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Izhan. All Rights Reserved.</p>
+              
+            </div>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
-
-</html>
+</html> 
