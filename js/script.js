@@ -185,7 +185,7 @@ window.addEventListener('load', () => {
     // Typing effect for hero section
     const element = document.querySelector('.element');
     if (element) {
-        const texts = ["HTML", "CSS", "JavaScript", "React", "UI Design", "UX Design", "Web Development"];
+        const texts = ["HTML", "CSS", "JavaScript", "UI Design", "UX Design", "Web Development"];
         let textIndex = 0;
         let charIndex = 0;
         let isDeleting = false;
